@@ -1,0 +1,4 @@
+CREATE TABLE shop_category (id BIGINT AUTO_INCREMENT, name VARCHAR(255) NOT NULL UNIQUE, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE shop_item (id BIGINT AUTO_INCREMENT, category_id BIGINT NOT NULL, title VARCHAR(255) NOT NULL, description TEXT NOT NULL, images VARCHAR(255), price DECIMAL(18, 2), email VARCHAR(255), is_active TINYINT(1) DEFAULT '0' NOT NULL, expires_at DATETIME NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX category_id_idx (category_id), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE shop_ordered (id BIGINT AUTO_INCREMENT, item_id BIGINT NOT NULL, email VARCHAR(255), status VARCHAR(255), created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
+ALTER TABLE shop_item ADD CONSTRAINT shop_item_category_id_shop_category_id FOREIGN KEY (category_id) REFERENCES shop_category(id) ON DELETE CASCADE;

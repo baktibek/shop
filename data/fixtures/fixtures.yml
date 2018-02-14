@@ -1,0 +1,30 @@
+ShopCategory:
+  phones:
+    name: Phones
+  woman_clothis:
+    name: Woman clothing
+  man_clothing:
+    name: Man clothing
+
+ShopItem:
+  phones:
+    ShopCategory: phones
+    title: Iphone 6S
+    description: |
+     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus itaque quaerat aliquid rerum numquam tempore voluptates, officiis, ab placeat alias libero. Dolor eveniet facere expedita dolorem deserunt temporibus qui animi illum consequatur alias fugiat neque, officiis voluptatum, fugit eligendi soluta. Rem, pariatur? Assumenda perspiciatis cum, pariatur praesentium debitis dolorem fugit?
+    images: /uploads/items/1.jpg
+    price: '250'
+    email: test@test.ru
+    is_active: '1'
+    expires_at: '2018-03-12'
+
+  woman_clothis:
+    ShopCategory: woman_clothis
+    title: Lorem ipsum dolor
+    description: |
+     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti amet corporis vitae incidunt, saepe sit quia reprehenderit. Voluptas eveniet in eos odio quia quo consequatur, porro a nostrum officia fugiat magni cupiditate delectus natus saepe esse ea optio eligendi quae ullam modi doloribus tempora inventore, asperiores aspernatur! Amet saepe sequi eaque nostrum nulla sapiente eveniet maiores voluptate eligendi, quasi. Suscipit.
+    images: /uploads/items/1.jpg
+    price: '15'
+    email: test@test.ru
+    is_active: '1'
+    expires_at: '2018-03-12'

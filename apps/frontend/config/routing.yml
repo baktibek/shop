@@ -1,0 +1,41 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+# default rules
+homepage:
+  url:   /
+  param: { module: item, action: index }
+
+show_item:
+  url: /item/:id
+  class: sfDoctrineRoute
+  options: { model:ShopItem, type: object, method_for_query: retrieveActiveItem }
+  param: { module: item, action: show }
+  requirements:
+    id: \d+
+
+item:
+  class: sfDoctrineRouteCollection
+  options: { model: ShopItem }
+
+category:
+  url: /category/:id
+  class: sfDoctrineRoute
+  param: 
+    module: category
+    action: show
+  options:
+    model: ShopCategory
+    type: object
+
+
+
+# generic rules
+# please, remove them by adding more specific rules
+# default_index:
+#   url:   /:module
+#   param: { action: index }
+
+# default:
+#   url:   /:module/:action/*
+

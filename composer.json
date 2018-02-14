@@ -1,0 +1,7 @@
+{
+    "name": "jobeet",
+    "require": {
+        "lexpress/symfony1": "1.5.*",
+        "lexpress/doctrine1": "1.3.*"
+    }
+}

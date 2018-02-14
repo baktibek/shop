@@ -76,7 +76,7 @@ class itemActions extends sfActions
     {
       $shop_item = $form->save();
 
-      $this->redirect('item/edit?id='.$shop_item->getId());
+      $this->redirect('show_item');
     }
   }
 }
